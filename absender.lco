@@ -2,6 +2,7 @@
 \RequirePackage{fix-cm}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{libertine}
+\RequirePackage{parskip}
 \RequirePackage{phonenumbers}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
