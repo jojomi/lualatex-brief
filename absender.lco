@@ -1,0 +1,53 @@
+\ProvidesFile{sender.lco}[2010/07/08 letter class option]
+\RequirePackage{fix-cm}
+\RequirePackage[ngerman]{babel}
+\RequirePackage{libertine}
+\RequirePackage{phonenumbers}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\hypersetup{pdfpagemode=None}
+\KOMAoptions{
+        paper=a4,
+        pagenumber=botcenter,
+        fromalign=right,
+        fromrule=afteraddress,
+%        fromphone,
+%        fromfax,
+        fromlogo,
+%        fromurl,
+%        fromemail,
+        backaddress,
+        foldmarks,
+%        headsepline,footsepline,
+        enlargefirstpage
+}
+\setkomavar{fromname}{Mein Name}
+\setkomavar{fromaddress}{Teststr.~1\\89548~München}
+\setkomavar{fromphone}{\phonenumber[country=DE,area-code-sep=brackets]{089123456789}}
+\setkomavar{fromphone}{\phonenumber[country=DE]{017123456798}}
+%\setkomavar{fromfax}{\phonenumber[country=DE,foreign]{089123456787}}
+\setkomavar{fromemail}{myemail@example.org}
+\setkomavar{phoneseparator}[Tel.]{:~}
+\setkomavar*{emailseparator}{}
+\setkomavar{emailseparator}{}
+\setkomavar{fromurl}{\url{https://example.org}}
+\setkomavar*{urlseparator}{}
+\setkomavar{urlseparator}{}
+\setkomavar{frombank}{Eine Bank\\BLZ~123\,45\,678\\Kto~123456789}
+\setkomavar{place}{Bremen}
+\setkomavar{fromlogo}{\parbox[b]{8cm}{\usekomafont{fromaddress}%
+        {\mbox{\LARGE \bfseries \topic}}
+        \smallskip}
+}
+\setkomafont{backaddress}{\sffamily}
+\setkomafont{fromaddress}{\sffamily}
+\addtokomafont{fromname}{\scriptsize}
+\addtokomafont{fromaddress}{\scriptsize}
+\pagestyle{headings}
+
+% ===== Signatur =====
+\setkomavar{signature}{%
+  \usekomavar{fromname}
+}
+\renewcommand*{\raggedsignature}{\raggedright}
+% ====================
