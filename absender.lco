@@ -49,8 +49,14 @@
 \pagestyle{headings}
 
 % ===== Signatur =====
-\setkomavar{signature}{%
-  \usekomavar{fromname}
-}
+% Keinen Platz für Unterschrift lassen
+%\@setplength{sigbeforevskip}{0pt}
+
+% Signatur mit Platz zum Unterschreiben
+%\setkomavar{signature}{\usekomavar{fromname}}
+% Signatur mit Unterschrift aus Datei (unterschrift.png)
+\@setplength{sigbeforevskip}{0pt}
+\setkomavar{signature}{\includegraphics[height=1.5cm]{unterschrift}\\\usekomavar{fromname}} 
+
 \renewcommand*{\raggedsignature}{\raggedright}
 % ====================
