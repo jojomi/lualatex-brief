@@ -24,6 +24,8 @@
 }
 \setkomavar{fromname}{Mein Name}
 \setkomavar{fromaddress}{Teststr.~1\\89548~München}
+%\setkomavar{backaddress}{Name\usekomavar{backaddressseparator}\usekomavar{fromaddress}}
+%\setkomavar{backaddressseparator}{ $\cdot$ }
 \setkomavar{fromphone}{\phonenumber[country=DE,area-code-sep=brackets]{089123456789}}
 \setkomavar{fromphone}{\phonenumber[country=DE]{017123456798}}
 %\setkomavar{fromfax}{\phonenumber[country=DE,foreign]{089123456787}}
