@@ -59,4 +59,11 @@
 \setkomavar{signature}{\includegraphics[height=1.5cm]{unterschrift}\\\usekomavar{fromname}} 
 
 \renewcommand*{\raggedsignature}{\raggedright}
+\newcommand*{\SignatureAndDate}[1]{%
+\begin{minipage}[t]{.47\textwidth}
+    \vspace{2.5em}
+    \par\noindent\makebox[\textwidth]{\hrulefill}
+    \makebox[\textwidth][l]{ {\scshape \scriptsize Ort, Datum \hfill #1} }
+\end{minipage}%
+}%
 % ====================
