@@ -6,7 +6,27 @@
 \RequirePackage{phonenumbers}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
-\hypersetup{pdfpagemode=None}
+\RequirePackage[ocgcolorlinks]{ocgx2}[2017/03/30]
+
+\AtBeginDocument{{
+        \usekomavar[\def\komaauthor]{fromname}
+        \usekomavar[\def\komadate]{date}
+        \hypersetup{
+                unicode=false,
+                pdftoolbar=false,
+                pdfmenubar=true,
+                pdffitwindow=false,
+                pdfstartview={FitH},
+                pdftitle={Brief},
+                pdfauthor={\komaauthor},
+                pdfsubject={Brief vom \komadate},
+                pdfcreator={\komaauthor},
+                pdfproducer={lualatex mit github.com/jojomi/lualatex-brief}, % producer of the document
+                pdfkeywords={Brief},
+                pdfnewwindow=false,
+                pdfpagemode=None,
+        }
+}}
 \KOMAoptions{
         paper=a4,
         pagenumber=botcenter,
