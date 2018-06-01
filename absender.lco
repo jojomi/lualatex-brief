@@ -4,6 +4,7 @@
 \RequirePackage{libertine}
 \RequirePackage{parskip}
 \RequirePackage{phonenumbers}
+\RequirePackage{xspace}
 \RequirePackage{graphicx}
 \RequirePackage{hyperref}
 \RequirePackage[ocgcolorlinks]{ocgx2}[2017/03/30]
